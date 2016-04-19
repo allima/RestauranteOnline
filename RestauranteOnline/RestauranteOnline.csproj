@@ -224,6 +224,18 @@
     <Content Include="Views\Usuario\Index.cshtml" />
     <Content Include="Views\Bairro\Index.cshtml" />
     <Content Include="Views\Genero\Index.cshtml" />
+    <Content Include="Views\Bairro\Inserir.cshtml" />
+    <Content Include="Views\Bairro\Alterar.cshtml" />
+    <Content Include="Views\Bairro\Excluir.cshtml" />
+    <Content Include="Views\Bairro\ErroExcluir.cshtml" />
+    <Content Include="Views\Genero\Inserir.cshtml" />
+    <Content Include="Views\Genero\Alterar.cshtml" />
+    <Content Include="Views\Genero\Excluir.cshtml" />
+    <Content Include="Views\Usuario\Inserir.cshtml" />
+    <Content Include="Views\Usuario\Alterar.cshtml" />
+    <Content Include="Views\Usuario\Excluir.cshtml" />
+    <Content Include="Views\Restaurante\Inserir.cshtml" />
+    <Content Include="Views\Restaurante\Alterar.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
