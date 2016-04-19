@@ -138,6 +138,7 @@
       <DependentUpon>ModeloDados.edmx</DependentUpon>
       <LastGenOutput>ModeloDados.Context.cs</LastGenOutput>
     </Content>
+    <Content Include="Models\ModeloDados.edmx.sql" />
     <Content Include="Models\ModeloDados.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>ModeloDados.edmx</DependentUpon>
@@ -216,9 +217,6 @@
   <ItemGroup>
     <Content Include="Views\web.config" />
     <Content Include="packages.config" />
-    <Content Include="ApplicationInsights.config">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
     <Content Include="scripts\jquery-2.2.3.min.map" />
     <Content Include="Views\Restaurante\Index.cshtml" />
     <Content Include="Views\Usuario\Index.cshtml" />
