@@ -176,9 +176,11 @@
     <Compile Include="Models\Bairro.cs">
       <DependentUpon>ModeloDados.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\BairroMetadado.cs" />
     <Compile Include="Models\Genero.cs">
       <DependentUpon>ModeloDados.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\GeneroMetadado.cs" />
     <Compile Include="Models\ModeloDados.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -197,9 +199,11 @@
     <Compile Include="Models\Restaurante.cs">
       <DependentUpon>ModeloDados.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\RestauranteMetadado.cs" />
     <Compile Include="Models\Usuario.cs">
       <DependentUpon>ModeloDados.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\UsuarioMetadado.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
