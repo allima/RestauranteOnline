@@ -236,6 +236,8 @@
     <Content Include="Views\Usuario\Excluir.cshtml" />
     <Content Include="Views\Restaurante\Inserir.cshtml" />
     <Content Include="Views\Restaurante\Alterar.cshtml" />
+    <Content Include="Views\Restaurante\Excluir.cshtml" />
+    <Content Include="Views\Restaurante\ErroExcluir.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
