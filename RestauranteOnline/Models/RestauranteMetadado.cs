@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
+using System.ComponentModel.DataAnnotations;
 
 namespace RestauranteOnline.Models
 {
@@ -26,10 +26,10 @@ namespace RestauranteOnline.Models
         [StringLength(40, ErrorMessage = "O Site deve possuir no máximo 40 caracteres")]
         public string Site { get; set; }
 
-        //[Required(ErrorMessage = "O Gênero é obrigatório")]
-        //public string Genero { get; set; }
+        [Required(ErrorMessage = "O Gênero é obrigatório")]
+        public string Genero { get; set; }
 
-        //[Required(ErrorMessage = "O Bairro é obrigatório")]
-        //public string Bairro { get; set; }
+        [Required(ErrorMessage = "O Bairro é obrigatório")]
+        public string Bairro { get; set; }
     }
 }
