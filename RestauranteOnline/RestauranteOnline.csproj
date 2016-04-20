@@ -133,6 +133,9 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="Imagens\ComidaMineira.png" />
+    <Content Include="Imagens\Hamburger.png" />
+    <Content Include="Imagens\Pizza.png" />
     <Content Include="Models\ModeloDados.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>ModeloDados.edmx</DependentUpon>
@@ -181,6 +184,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\HelperImagens.cs" />
     <Compile Include="Models\Bairro.cs">
       <DependentUpon>ModeloDados.tt</DependentUpon>
     </Compile>
