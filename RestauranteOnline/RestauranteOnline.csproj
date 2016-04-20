@@ -208,10 +208,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ModeloDados.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Models\Pesquisa.cs" />
     <Compile Include="Models\Restaurante.cs">
       <DependentUpon>ModeloDados.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\RestauranteMetadado.cs" />
+    <Compile Include="Models\ResultadoPesquisa.cs" />
     <Compile Include="Models\Usuario.cs">
       <DependentUpon>ModeloDados.tt</DependentUpon>
     </Compile>

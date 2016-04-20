@@ -5,4 +5,58 @@
 
 @Html.ExibeImagens()
 
+<h3>Encontre seu restaurante aqui!</h3>
+<div class="row> 
+    <form class="form-inline> 
+        <div class="form-group"> 
+            <label>Bairro</label> 
+            @Html.DropDownList("Bairro") 
+        </div> 
+        <div class="form-group"> 
+            <label>Gênero</label> 
+            @Html.DropDownList("Genero") 
+        </div> 
+    <button type="button" id="pesquisar" class="btn btn-success">Pesquisar</button> 
+    <br /><br />
+   </form> 
+    </div>
+ <div class="row">
+     <div id="resultados"></div> 
+ </div> 
 
+@section Scripts{
+    <script>
+        $(function() {
+            $("#pesquisar").on("click", function() { // Captura clique no botio "pesquisar".
+                // Obtem os dados dos DropDownLists Bairro e Genero selecionados e os atribui a uma variavel.
+                var pesquisa = { IDBairro: $("#Bairro").val(), IDGenero: $("#Genero").val() };
+                // Exibe os resultados da pesquisa passando como parametros o controller, a action,
+                // a variavel contendo os dados do bairro e do genero e os resultados.
+                $.getJSON("/home/pesquisar", pesquisa, function(data) {
+                    var resultados = $("#resultados"); // Obtem os resultados apresentados no div.
+                    resultados.empty(); // Limpa os resultados apresentados anteriormente no div.
+                    if (data.length == 0) { // Se nenhum registro for retornado.
+                        resultados.append('<div class="alert alert-warning ">Nao encontramos nenhum restaurante...</div>');
+                        return false; // Interrompe a execucao do script.
+                    }
+                    // Obtem os dados de cada registro retornado e os adiciona na variavel "resultados".
+                    for (var i = 0; i < data.length; i++) {
+                        // Ajusta os dados do campo DisqueEntrega de "boor para "string".
+                        if (data[i].DisqueEntrega == true)
+                            data[i].DisqueEntrega = "Sim";
+                        else
+                            data[i].DisqueEntrega = "Não";
+                        resultados.append('<div class="alert alert-success">' + 
+                                            '<h4><b>' + data[i].Nome + '</b></h4>' +
+                                            '<p><b>Endereco: </b>' + data[i].Endereco + '</p>' +
+                                            '<p><b>Telefone: </b>' + data[i].Telefone + '</p> '+
+                                            '<p><b>Site: </b>' + data[i].Site + '</p>' +
+                                            '<p><b>Disque Entrega: </b>' + data[i].DisqueEntrega + '</p>' +
+                                            '</div>');
+                    }
+                }); // Final da funcao para obtencao dos resultados.
+                return false; // Interrompe a execucao do script.
+            }); // Final da funcao onclick 
+        }); // Final da funcao principal 
+    </script> 
+    }
