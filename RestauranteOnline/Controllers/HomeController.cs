@@ -10,6 +10,7 @@ namespace RestauranteOnline.Controllers
     public class HomeController : Controller
     {
         private RestauranteBDEntities db = new RestauranteBDEntities();
+
         public ActionResult Index()
         {
             ViewBag.Genero = new SelectList(db.Genero, "IDGenero", "Descricao");

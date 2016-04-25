@@ -6,8 +6,9 @@
 @Html.ExibeImagens()
 
 <h3>Encontre seu restaurante aqui!</h3>
-<div class="row> 
-    <form class="form-inline> 
+
+<div class="row"> 
+    <form class="form-inline"> 
         <div class="form-group"> 
             <label>Bairro</label> 
             @Html.DropDownList("Bairro") 
@@ -24,8 +25,7 @@
      <div id="resultados"></div> 
  </div> 
 
-@section Scripts
-{
+@section Scripts{
     <script>
             $(function () {
                 $("#pesquisar").on("click", function ()//Captura clique no botão de id="pesquisar"
