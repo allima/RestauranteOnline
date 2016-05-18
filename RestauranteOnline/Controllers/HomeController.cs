@@ -11,6 +11,11 @@ namespace RestauranteOnline.Controllers
     {
         private RestauranteBDEntities db = new RestauranteBDEntities();
 
+        public ActionResult Login()
+        {
+            ViewBag.Title = "Autenticação";
+            return View();
+        }
         public ActionResult Index()
         {
             ViewBag.Genero = new SelectList(db.Genero, "IDGenero", "Descricao");

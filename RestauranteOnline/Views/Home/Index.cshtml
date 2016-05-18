@@ -27,9 +27,9 @@
 
 @section Scripts{
     <script>
-            $(function () {
-                $("#pesquisar").on("click", function ()//Captura clique no botão de id="pesquisar"
-                {
+            $(function(){
+                $("#pesquisar").on("click", function (){//Captura clique no botão de id="pesquisar"
+               
                     //Obtém os dados dos DropDownLists Bairro e Gênero selecionados e os atribui a uma variável
                     var pesquisa = {
                         IDBairro: $("#Bairro").val(), IDGenero: $("#Genero").val()
@@ -41,7 +41,7 @@
 
                         if (data.length == 0) //Se nenhum registro foi retornado
                         {
-                            resultados.append('<div class="alert alert-warning "> Não encontramos nenhum restaurante...</div>');
+                            resultados.append('<div class="alert alert-warning"> Não encontramos nenhum restaurante...</div>');
                             return false;//Interrompe a execução do script
                         }
                         //Obtém os dados de cada registro retornado e os adicina na variável "resultados"
@@ -55,7 +55,7 @@
                                               '<h4><b>' + data[i].Nome + '</b></h4>' +
                                               '<p><p>Endereço: </b>' + data[i].Endereco + '</p>' +
                                               '<p><p>Telefone: </b>' + data[i].Telefone + '</p>' +
-                                              '<p><p>Site: </b>' + data[i].Portal + '</p>' +
+                                              '<p><p>Site: </b>' + data[i].Site + '</p>' +
                                               '<p><p>Disque Entrega: </b>' + data[i].DisqueEntrega + '</p>' + '</div>');
                         }
                     }); //Final da função para obtenção dos resultados

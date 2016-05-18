@@ -169,6 +169,7 @@
     <None Include="scripts\jquery-2.2.3.intellisense.js" />
     <Content Include="scripts\jquery-2.2.3.js" />
     <Content Include="scripts\jquery-2.2.3.min.js" />
+    <Content Include="scripts\Login.js" />
     <Content Include="Web.config" />
     <Content Include="Views\Layout.cshtml" />
     <Content Include="Views\_ViewStart.cshtml" />
@@ -176,6 +177,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AutenticaUsuarioController.cs" />
     <Compile Include="Controllers\BairroController.cs" />
     <Compile Include="Controllers\GeneroController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -219,6 +221,8 @@
     </Compile>
     <Compile Include="Models\UsuarioMetadado.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositorios\RepositorioCookies.cs" />
+    <Compile Include="Repositorios\RepositorioUsuarios.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
@@ -242,6 +246,7 @@
     <Content Include="Views\Restaurante\Alterar.cshtml" />
     <Content Include="Views\Restaurante\Excluir.cshtml" />
     <Content Include="Views\Restaurante\ErroExcluir.cshtml" />
+    <Content Include="Views\Home\Login.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -251,6 +256,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\AutenticaUsuario\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
