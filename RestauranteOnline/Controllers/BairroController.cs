@@ -71,7 +71,6 @@ namespace RestauranteOnline.Controllers
                 db.Bairro.Remove(bairro);
                 db.SaveChanges();
                 return RedirectToAction("Index");
-
             }
             catch
             {

@@ -2,7 +2,7 @@
     $("#status").hide();
     $("#botao-entrar").click( function () {
         $.ajax({
-            url:"/AutenticaUsuario/AutenticacaoUsuario",
+            url: "/AutenticaUsuario/AutenticacaoUsuario",
             data: {Login:$("#txtLogin").val(), Senha:$("#txtSenha").val()},
             dataType: "json",
             type:"GET",
