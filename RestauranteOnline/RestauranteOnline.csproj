@@ -179,10 +179,12 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AutenticaUsuarioController.cs" />
     <Compile Include="Controllers\BairroController.cs" />
+    <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\GeneroController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\RestauranteController.cs" />
     <Compile Include="Controllers\UsuarioController.cs" />
+    <Compile Include="Filtros\FiltroAcesso.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -257,6 +259,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Views\AutenticaUsuario\" />
+    <Folder Include="Views\Base\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

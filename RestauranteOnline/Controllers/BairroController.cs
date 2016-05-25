@@ -8,7 +8,7 @@ using System.Web.Mvc;
 
 namespace RestauranteOnline.Controllers
 {
-    public class BairroController : Controller
+    public class BairroController : BaseController
     {
         private RestauranteBDEntities db = new RestauranteBDEntities();
 

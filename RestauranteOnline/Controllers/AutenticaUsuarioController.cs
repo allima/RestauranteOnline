@@ -14,12 +14,12 @@ namespace RestauranteOnline.Controllers
         {
             if (RepositorioUsuarios.AutenticarUsuario(Login, Senha))
             {
-                return Json(new { OK = true, Mensagem = "Usuario não encontrado " },
+                return Json(new { OK = true, Mensagem = "Usuario encontrado Redirecionando..." },
                     JsonRequestBehavior.AllowGet);
             }
             else
             {
-                return Json(new { OK = false, Mensagem = "Usuario encontrado Redirecionando..." },
+                return Json(new { OK = false, Mensagem = "Usuario não encontrado" },
                 JsonRequestBehavior.AllowGet);
             }
         }

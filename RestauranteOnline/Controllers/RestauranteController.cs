@@ -9,7 +9,7 @@ using System.Web.Mvc;
 
 namespace RestauranteOnline.Controllers
 {
-    public class RestauranteController : Controller
+    public class RestauranteController : BaseController
     {
         private RestauranteBDEntities db = new RestauranteBDEntities();
 

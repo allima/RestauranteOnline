@@ -20,13 +20,44 @@ namespace RestauranteOnline.Repositorios
                     return false;
 
                 }
-                else {
+                else
+                {
                     RepositorioCookies.RegitraCookie(QueryAutencaUsuario.IDUsuario);
                     return true;
                 }
-                            }
-            catch(Exception) {
+            }
+            catch (Exception)
+            {
                 return false;
+            }
+        }
+
+        public static Usuario RecuperaUsuario(long IDUsuario)
+        {
+            try
+            {
+                RestauranteBDEntities db = new RestauranteBDEntities();
+                var usuario = db.Usuario.Where(u => u.IDUsuario == IDUsuario).SingleOrDefault();
+                return usuario;
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
+
+        public static Usuario VerificaStatusUsuario()
+        {
+            var usuario = HttpContext.Current.Request.Cookies["CookieUsuario"];
+            if (usuario == null)
+            {
+                return null;
+            }
+            else
+            {
+                long IDUsuario = Convert.ToInt64(usuario.Values["IDUsuario"]);
+                var usuarioRetornado = RecuperaUsuario(IDUsuario);
+                return usuarioRetornado;
             }
         }
     }
